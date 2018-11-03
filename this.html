@@ -7,7 +7,9 @@
 <body>
     <div class="container">
         <div id="globalVariable"></div>
-        <!--<button id="button" class="btn btn-lg btn-primary">Strict Mode is ACTIVE!</button>-->
+        <br>
+        <div id="variableInObject"></div>
+
     </div>
 
 <script type="text/javascript">
@@ -19,13 +21,23 @@
     }
 
     thisInsideFunction();
-    console.log(typeof person);
     if (this.person !== undefined) {
-        document.getElementById("globalVariable").innerHTML = "The value of person: " + person + ". Without 'strict mode', person is defined as a global variable!";
+        document.getElementById("globalVariable").innerHTML = "The value of person: <strong>" + person + "</strong>.<br>Without 'strict mode', The value of \"this\" is the global object. Therefore, person is defined as a global variable!";
     }
     else {
         document.getElementById("globalVariable").innerHTML = "No!";
     }
+
+    var Person = {
+        firstName: "Frank",
+        sayHi: function thisInsideDeclaredObject() {
+            return "Hi, " + this.firstName + ". ";
+        }
+
+    }
+
+    document.getElementById("variableInObject").innerHTML = Person.sayHi() + "<br>When \"this\" is inside of a declared object, \t\tThe value of keyword \"this\" will always be the closest parent object!";
+
 </script>
 
 </body>
