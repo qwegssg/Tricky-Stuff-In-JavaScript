@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>"This" Keyword</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div id="globalVariable"></div>
+        <!--<button id="button" class="btn btn-lg btn-primary">Strict Mode is ACTIVE!</button>-->
+    </div>
+
+<script type="text/javascript">
+    // "use strict";
+    function thisInsideFunction() {
+        if (this !== undefined) {
+            this.person = "Frank";
+        }
+    }
+
+    thisInsideFunction();
+    console.log(typeof person);
+    if (this.person !== undefined) {
+        document.getElementById("globalVariable").innerHTML = "The value of person: " + person + ". Without 'strict mode', person is defined as a global variable!";
+    }
+    else {
+        document.getElementById("globalVariable").innerHTML = "No!";
+    }
+</script>
+
+</body>
+</html>
