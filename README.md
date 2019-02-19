@@ -1,8 +1,9 @@
 # Tricky-Stuff-In-JavaScript
 Deal with the tricky stuff, like "this" Keyword, OOP, in JavaScript.  
 ## Keyword "this"  
+<p>Without 'strict mode':</p>
 <ul>
-  <li>Without 'strict mode', The value of "this", when "this" is not inside of a declared object, is the global object.</li>
+  <li>The value of "this", when "this" is not inside of a declared object, is the global object.</li>
   <li>When "this" is inside of a declared object, The value of keyword "this" will always be the closest parent object!</li>
 </ul>   
   
