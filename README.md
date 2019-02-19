@@ -20,5 +20,6 @@ Deal with the tricky stuff, like "this" Keyword, OOP, in JavaScript.
 <ul>
   <li>'>' for the first level children.</li>
 </ul>  
-<strong>JSONP</strong>  
+  
+## JSONP
 Listed two examples about the usage of JSONP.  
