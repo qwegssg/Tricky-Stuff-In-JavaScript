@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JSONP</title>
+</head>
+<body>
+    <div id="data1"></div>
+    <div id="data2"></div>
+    <script type="text/javascript">
+
+        function callbackFunction1(result) {
+            console.log(result);
+            let html = "<ul>";
+            for (let value of result) {
+                html += "<li>" + value + "</li>";
+            }
+            html += "</ul>";
+            document.getElementById("data1").innerHTML = html;
+        }
+
+        function callbackFunction2(result) {
+            console.log(result);
+            let html = "<ul>";
+            for (let key in result) {
+                html += "<li>" + result[key].name + ": " + result[key].price + "</li>";
+            }
+            html += '</ul>';
+            document.getElementById('data2').innerHTML = html;
+        }
+
+    </script>
+    <script type="text/javascript" src="http://www.runoob.com/try/ajax/jsonp.php?jsoncallback=callbackFunction1"></script>
+    <script type="text/javascript" src="http://api.money.126.net/data/feed/0000001,1399001?callback=callbackFunction2"></script>
+
+</body>
+</html>
