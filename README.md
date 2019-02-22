@@ -18,6 +18,9 @@ Deal with the tricky stuff, like "this" Keyword, OOP, in JavaScript.
   <li>'>' for the first level children.</li>
 </ul>  
 
+## JSONP ##
+Listed two examples about the usage of JSONP.  
+
 ## Keyword "this" ## 
 ### Global context: ###
 <p>In the <b>global execution context</b> (outside of any function), "this" refers to the global object <b>whether in strict mode or not</b>.</p>
@@ -36,5 +39,4 @@ Deal with the tricky stuff, like "this" Keyword, OOP, in JavaScript.
   <li>If this was not defined by the execution context, it remains <b>undefined.</b></li>
 </ul>
   
-## JSONP ##
-Listed two examples about the usage of JSONP.  
+
