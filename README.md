@@ -17,12 +17,17 @@ Deal with the tricky stuff, like "this" Keyword, OOP, in JavaScript.
 </ul>  
 
 ## Keyword "this"  
-<div>In the<b>global execution context</b> (outside of any function), "this" refers to the global object <b>whether in strict mode or not</b>.</div>
-<div>Without 'strict mode':</div>
+<div>In the <b>global execution context</b> (outside of any function), "this" refers to the global object <b>whether in strict mode or not</b>.</div>
+<div>When code is <b>NOT</b> in strict mode':</div>
 <ul>
   <li>The value of "this", when "this" is not inside of a declared object, is the global object.</li>
   <li>When "this" is inside of a declared object, The value of keyword "this" will always be the closest parent object!</li>
-</ul> 
+</ul>
+<div>When code is in strict mode':</div>
+<ul>
+  <li>The value of this remains at whatever it was set to when entering the execution context,</li>
+  <li>If this was not defined by the execution context, it remains undefined.</li>
+</ul>
   
 ## JSONP
 Listed two examples about the usage of JSONP.  
