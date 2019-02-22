@@ -18,7 +18,7 @@ Deal with the tricky stuff, like "this" Keyword, OOP, in JavaScript.
 
 ## Keyword "this"  
 <p>In the <b>global execution context</b> (outside of any function), "this" refers to the global object <b>whether in strict mode or not</b>.</p>
-<p>Inside a function, the value of "this" depends on how the function is called.</p>
+<p>Inside a function, the value of "this" depends on how the function is called. <b>(Whether the function is called directly or as a method or property of an object.)</b></p>
 <div>When code is <b>NOT</b> in strict mode:</div>
 <ul>
   <li>The value of "this", when "this" is not inside of a declared object, is the global object.</li>
