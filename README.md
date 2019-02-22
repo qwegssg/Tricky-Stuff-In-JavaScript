@@ -17,7 +17,9 @@ Deal with the tricky stuff, like "this" Keyword, OOP, in JavaScript.
 </ul>  
 
 ## Keyword "this"  
+### Global context
 <p>In the <b>global execution context</b> (outside of any function), "this" refers to the global object <b>whether in strict mode or not</b>.</p>
+### Function context
 <p>Inside a function, the value of "this" depends on how the function is called. <b>(Whether the function is called directly or as a method or property of an object.)</b></p>
 <div>When code is <b>NOT</b> in strict mode:</div>
 <ul>
@@ -26,8 +28,8 @@ Deal with the tricky stuff, like "this" Keyword, OOP, in JavaScript.
 </ul>
 <div>When code is in strict mode:</div>
 <ul>
-  <li>The value of this remains at whatever it was set to when entering the execution context,</li>
-  <li>If this was not defined by the execution context, it remains undefined.</li>
+  <li>The value of this remains at whatever it was set to when entering the execution context.</li>
+  <li><b>If this was not defined by the execution context, it remains undefined.</b></li>
 </ul>
   
 ## JSONP
