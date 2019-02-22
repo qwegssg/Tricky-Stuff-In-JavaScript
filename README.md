@@ -1,11 +1,5 @@
 # Tricky-Stuff-In-JavaScript
 Deal with the tricky stuff, like "this" Keyword, OOP, in JavaScript.  
-## Keyword "this"  
-<p>Without 'strict mode':</p>
-<ul>
-  <li>The value of "this", when "this" is not inside of a declared object, is the global object.</li>
-  <li>When "this" is inside of a declared object, The value of keyword "this" will always be the closest parent object!</li>
-</ul>   
   
 ## CSS Selector  
 <strong>.selector #selector</strong>
@@ -21,6 +15,14 @@ Deal with the tricky stuff, like "this" Keyword, OOP, in JavaScript.
 <ul>
   <li>'>' for the first level children.</li>
 </ul>  
+
+## Keyword "this"  
+<div>In the<b>global execution context</b> (outside of any function), "this" refers to the global object <b>whether in strict mode or not</b>.</div>
+<div>Without 'strict mode':</div>
+<ul>
+  <li>The value of "this", when "this" is not inside of a declared object, is the global object.</li>
+  <li>When "this" is inside of a declared object, The value of keyword "this" will always be the closest parent object!</li>
+</ul> 
   
 ## JSONP
 Listed two examples about the usage of JSONP.  
