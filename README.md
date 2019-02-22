@@ -31,7 +31,7 @@ Deal with the tricky stuff, like "this" Keyword, OOP, in JavaScript.
 <div>When code is in strict mode:</div>
 <ul>
   <li>The value of this remains at whatever it was set to when entering the execution context.</li>
-  <li><b>If this was not defined by the execution context, it remains undefined.</b></li>
+  <li>If this was not defined by the execution context, it remains <b>undefined.</b></li>
 </ul>
   
 ## JSONP ##
