@@ -4,13 +4,13 @@ Deal with the tricky stuff, like "this" Keyword, OOP, in JavaScript.
 ## CSS Selector ## 
 <strong>.selector #selector</strong>
 <ul>
-  <li>space for the children.  </li>
+  <li>space for the children. </li>
   <li>elements matched by the second selector are selected if they have an ancestor element matching the first selector.</li>
 </ul>  
 
 <strong>.selector#selector</strong>
 <ul>
-  <li>no space for the same level structure. E.g. `<div id="selector" class="selector"/>`</li>
+  <li>no space for the same level structure.
 </ul>
 
 <strong>.selector > #selector</strong>
