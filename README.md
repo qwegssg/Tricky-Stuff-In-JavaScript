@@ -18,7 +18,7 @@ Deal with the tricky stuff, like "this" Keyword, OOP, in JavaScript.
   <li>'>' for the first level children.</li>
 </ul>
 
-## Function Hoisting ##
+## Hoisting (Function Expression V.S. Function Declaration) ##
 ### Function Declaration: ###
 <p>The function declaration is "magic", function declarations are hoisted to the top of the enclosing function or global scope. </p>
 
