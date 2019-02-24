@@ -2,9 +2,9 @@
 Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.  
 ##### Table of Contents  
 [CSS Selector](#CSS-Selector)  
-[Hoisting](#Hoisting-(Function-Expression-V.S.-Function-Declaration))  
+[Hoisting](#hoisting-function-expression-vs-function-declaration)  
 [JSONP](#JSONP)  
-[Keyword "this"](#Keyword-"this")  
+[Keyword "this"](#Keyword-this)  
   
 ## CSS Selector ## 
 <strong>.selector #selector</strong>
