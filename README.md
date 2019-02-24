@@ -5,6 +5,7 @@ Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.
 [Hoisting](#hoisting-function-expression-vs-function-declaration)  
 [JSONP](#JSONP)  
 ["this" keyword](#this-keyword)  
+[rest parameter](#rest-parameter)
   
 ## CSS Selector ## 
 <strong>.selector #selector</strong>
@@ -51,5 +52,5 @@ Listed two examples about the usage of JSONP.
 </ul>
 
 ## rest parameter ##
-The rest parameter syntax allows us to represent an indefinite number of arguments as an array.
+The rest parameter syntax allows us to represent an indefinite number of arguments as an array.  
 SumCalculator.js gives a example to use rest parameter to sum up numbers.
