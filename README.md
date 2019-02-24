@@ -1,9 +1,10 @@
 # Tricky-Stuff-In-JavaScript
 Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.  
 ##### Table of Contents  
-[CSS Selector](#CSSSelector)  
+[CSS Selector](#CSS Selector)  
+[Hoisting](#Hoisting)  
 [JSONP](#JSONP)  
-[Emphasis](#emphasis)  
+[Keyword "this"](#JSONP)  
   
 ## CSS Selector ## 
 <strong>.selector #selector</strong>
