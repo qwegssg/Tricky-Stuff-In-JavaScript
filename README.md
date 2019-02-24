@@ -1,6 +1,6 @@
 # Tricky-Stuff-In-JavaScript
 Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.  
-##### Table of Contents  
+#### Table of Contents  ####
 [CSS Selector](#CSS-Selector)  
 [Hoisting](#hoisting-function-expression-vs-function-declaration)  
 [JSONP](#JSONP)  
