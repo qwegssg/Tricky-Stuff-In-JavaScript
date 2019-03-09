@@ -2,12 +2,134 @@
 <html>
 <head>
     <title>Pagination Demo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style type="text/css">
+        body {
+            padding: 20px 0;
+        }
+        .table {
+            width: 800px;
+            margin: 0 auto;
+        }
+        #wrap {
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #pagination {
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
-    
+    <table class="table table-hover table-striped" id="table_result">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>id</th>
+                <th>Hours</th>
+                <th>Temperature</th>
+            </tr>
+        </thead>
+        <tbody id="table_body_result">
+
+        </tbody>
+    </table>
+    <div id="wrap">
+        <div id="pagination"></div>
+    </div>
 
     <script type="text/javascript">
-        
+        function getTableData(totalData) {
+            var tempHTML = "";
+            for (let i = 0; i < totalData; i++) {
+                tempHTML += "<tr>";
+                tempHTML += "<td>2019-03-08</td><td>"+ (i + 1) + "</td><td>20</td><td>20</td>";
+                tempHTML += "</tr>";
+            }
+            document.getElementById("table_body_result").innerHTML = tempHTML;
+        }
+
+        function goToPage(currPage, pageSize) {
+            /* length is a read-only property. */
+            const theTable = document.getElementById("table_result");
+            /* Attention: total rows minus the first row (the header row) */
+            const totalData = theTable.rows.length - 1;
+            /* total number of pages */
+            var totalPage = 0;
+            if (totalData % pageSize > 0) {
+                totalPage = parseInt(totalData / pageSize) + 1;
+            } else {
+                totalPage = parseInt(totalData / pageSize);
+            }
+    
+            /* determine the start row and the end row of the current page */
+            var startRow = (currPage - 1) * pageSize + 1;
+            var endRow = currPage * pageSize;
+            endRow = endRow < totalData ? endRow : totalData;
+            
+            console.log("Total Data: " + totalData);
+            console.log("Total Page: " + totalPage);
+            console.log("Current Page: " + currPage);
+            console.log("Page Size: " + pageSize);
+            console.log("End Row: " + endRow);
+
+            /* 
+                iterate the whole table to display or hide the row of data.
+                Attention: the 0th is the header row. Thus, total number of rows = totalData + 1
+            */
+            for (let i = 1; i <= totalData; i++) {
+                if (i >= startRow && i <= endRow) {
+                    theTable.rows[i].style.display = "table-row";
+                } else {
+                    theTable.rows[i].style.display = "none";
+                }
+            }
+            /* 
+                deal with the pagination bar.
+                "&nbsp;": non-breaking space. A space character that prevents an automatic line break at its position.
+            */
+            var tempHTML = "";
+            /* if the current page is NOT the first page */
+            if (currPage > 1) {
+                /* E.g.: onclick="myFunction()" */
+                tempHTML += "<a href=\"#\" onClick=\"goToPage(" + (currPage - 1) + "," + pageSize 
+                            + ")\">Previous&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>"
+            } 
+            /* if the current page is the first page */
+            else {
+                tempHTML += "Previous&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+            /* iterate the pages */
+            for (let i = 1; i <= totalPage; i++) {
+                if (i == currPage) {
+                    tempHTML += i + "&nbsp;&nbsp;&nbsp;"
+                } else {
+                    tempHTML += "<a href=\"#\" onClick=\"goToPage(" + i + "," + pageSize 
+                                + ")\">" + i + "&nbsp;&nbsp;&nbsp;</a>"
+                }
+            }
+            /* if the current page is NOT the last page */
+            if (currPage < totalPage) {
+                tempHTML += "<a href=\"#\" onClick=\"goToPage(" + (currPage + 1) + "," + pageSize 
+                            + ")\">Next&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>";
+            } 
+            /* if the current page is the last page */
+            else {
+                tempHTML += "Next&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+
+            document.getElementById("pagination").innerHTML = tempHTML;
+        }
+
+        /* initialize the total number of data */
+        getTableData(50);
+        /* set the current page to the first page, set the page size to 8 */
+        goToPage(1, 8);
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
