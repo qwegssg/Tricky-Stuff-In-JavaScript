@@ -5,8 +5,8 @@ Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.
 [Hoisting](#hoisting-function-expression-vs-function-declaration)  
 [JSONP](#JSONP)  
 ["this" keyword](#this-keyword)  
-[rest parameter](#rest-parameter)
-[Pagination](#pagination)
+[rest parameter](#rest-parameter)  
+[Pagination](#Pagination)
   
 ## CSS Selector ## 
 <strong>.selector #selector</strong>
