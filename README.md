@@ -5,7 +5,7 @@ Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.
 [Hoisting](#hoisting-function-expression-vs-function-declaration)  
 [JSONP](#JSONP)  
 [Pagination](#Pagination)  
-["this" keyword](#this-keyword)  
+[This](#this-keyword)  
 [rest parameter](#rest-parameter)
   
 ## CSS Selector ## 
@@ -37,6 +37,7 @@ Listed two examples about the usage of JSONP.
 
 ## Pagination ##  
 Deal with the pagination of table content.  
+![pagination](https://github.com/qwegssg/Tricky-Stuff-In-JavaScript/master/pagination.png)
 
 ## rest parameter ##
 The rest parameter syntax allows us to represent an indefinite number of arguments as an array.  
