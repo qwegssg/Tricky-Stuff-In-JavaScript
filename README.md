@@ -4,8 +4,9 @@ Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.
 [CSS Selector](#CSS-Selector)  
 [Hoisting](#hoisting-function-expression-vs-function-declaration)  
 [JSONP](#JSONP)  
-["this" keyword](#this-keyword)  
-[rest parameter](#rest-parameter)
+[Pagination](#Pagination)  
+[This](#this-keyword)  
+[Rest parameter](#rest-parameter)
   
 ## CSS Selector ## 
 <strong>.selector #selector</strong>
@@ -34,6 +35,14 @@ Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.
 ## JSONP ##
 Listed two examples about the usage of JSONP.  
 
+## Pagination ##  
+Deal with the pagination of table content.  
+![pagination](https://github.com/qwegssg/Tricky-Stuff-In-JavaScript/master/blob/pagination.png)
+
+## rest parameter ##
+The rest parameter syntax allows us to represent an indefinite number of arguments as an array.  
+SumCalculator.js gives a example to use rest parameter to sum up numbers.  
+
 ## "this" keyword ## 
 ### Global context: ###
 <p>In the <b>global execution context</b> (outside of any function), "this" refers to the global object <b>whether in strict mode or not</b>.</p>
@@ -49,8 +58,4 @@ Listed two examples about the usage of JSONP.
 <ul>
   <li>The value of this remains at whatever it was set to when entering the execution context.</li>
   <li>If this was not defined by the execution context, it remains <b>undefined.</b></li>
-</ul>
-
-## rest parameter ##
-The rest parameter syntax allows us to represent an indefinite number of arguments as an array.  
-SumCalculator.js gives a example to use rest parameter to sum up numbers.
+</ul>  
