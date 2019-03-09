@@ -41,6 +41,11 @@
     </div>
 
     <script type="text/javascript">
+        /* initialize the total number of data */
+        getTableData(50);
+        /* set the current page to the first page, set the page size to 8 */
+        goToPage(1, 8);
+    
         function getTableData(totalData) {
             var tempHTML = "";
             for (let i = 0; i < totalData; i++) {
@@ -77,7 +82,7 @@
 
             /* 
                 iterate the whole table to display or hide the row of data.
-                Attention: the 0th is the header row. Thus, total number of rows = totalData + 1
+                Attention: the 0th is the header row. Thus, the total number of rows = totalData + 1
             */
             for (let i = 1; i <= totalData; i++) {
                 if (i >= startRow && i <= endRow) {
@@ -122,11 +127,6 @@
 
             document.getElementById("pagination").innerHTML = tempHTML;
         }
-
-        /* initialize the total number of data */
-        getTableData(50);
-        /* set the current page to the first page, set the page size to 8 */
-        goToPage(1, 8);
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
