@@ -4,7 +4,7 @@ Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.
 [CSS Selector](#CSS-Selector)  
 [Hoisting](#hoisting-function-expression-vs-function-declaration)  
 [JSONP](#JSONP)  
-[Pagination](#Pagination)
+[Pagination](#Pagination)  
 ["this" keyword](#this-keyword)  
 [rest parameter](#rest-parameter)
   
