@@ -3,6 +3,7 @@ Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.
 #### Table of Contents  ####
 [CSS Selector](#CSS-Selector)  
 [Hoisting](#hoisting-function-expression-vs-function-declaration)  
+[Inheritance](#Inheritance)
 [JSONP](#JSONP)  
 [Pagination](#Pagination)  
 [this keyword](#this-keyword)  
@@ -30,7 +31,10 @@ Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.
 <p>The function declaration is "magic", function declarations are hoisted to the top of the enclosing function or global scope. </p>
 
 ### Function Expression: ###
-<p>However, function expressions are not hoisted. The reason is because only the variable, foo, in the example JavaScript file is moved to the top of the scope. However, The assignment to the function is NOT moved to the top by the JS interpreter</p>
+<p>However, function expressions are not hoisted. The reason is because only the variable, foo, in the example JavaScript file is moved to the top of the scope. However, The assignment to the function is NOT moved to the top by the JS interpreter</p>  
+
+## Inheritance ##
+Implement inheritance in JavaScript using ES5 syntax.  
 
 ## JSONP ##
 Listed two examples about the usage of JSONP.  
