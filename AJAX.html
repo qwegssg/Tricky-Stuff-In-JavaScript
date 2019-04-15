@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+</head>
+<body>
+
+    <script>
+        /* vanilla JavaScript: */
+        /* request: */
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://www.google.com/");
+        xhr.send(null);
+
+        /* response: */
+        xhr.onreadystatechange = function() {
+            var DONE = "4";
+            var OK = "200";
+            // the request is sent:
+            if (xhr.readyState == DONE) {
+                // the response is successfully returned
+                if (xhr.status == OK) {
+                    console.log(xhr.responseText);
+                } else {
+                    console.error("ERROR: ", xhr.status);
+                }
+            }
+        }
+
+        /* jQuery: */
+        $.ajax({
+            method: "GET",
+            url: "https://www.google.com/"
+        }).done(function(res) {
+            console.log(res);
+        }).fail(function(err) {
+            console.error("ERROR: ", err.status);
+        });
+    </script>
+</body>
+</html>
