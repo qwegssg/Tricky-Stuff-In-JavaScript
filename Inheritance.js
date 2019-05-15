@@ -19,7 +19,7 @@ function Engineer(firstName, lastName, age, gender, position) {
     this.position = position;
 }
 /* ******** set Engineer()'s prototype and prototype's constructor reference: ******** */
-Engineer.prototype = Object.create(Person.prototype);
+Engineer.prototype = new Person();
 Object.defineProperty(Engineer.prototype, 'constructor', { 
     value: Engineer, 
     enumerable: false, // so that it does not appear in 'for in' loop
