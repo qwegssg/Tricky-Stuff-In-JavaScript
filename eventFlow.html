@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="parent">
+        <div id="children">
+            Click
+        </div>
+    </div>
+</ol>
+</body>
+
+<script type="text/javascript">
+
+    children.addEventListener('click', function (e) { 
+        alert('Children Capture');
+        // e.stopPropagation();
+    }, true);
+
+    children.addEventListener('click', function (e) { 
+        alert('Children Bubble 2');
+        // e.stopPropagation();
+    }, false);
+
+    parent.addEventListener('click', function (e) { 
+        alert('Parent Capture');
+        // e.stopPropagation();
+    }, true);
+
+    parent.addEventListener('click', function (e) { 
+        alert('Parent Bubble');
+        // e.stopPropagation();
+    }, false);
+
+</script>
+</html>
