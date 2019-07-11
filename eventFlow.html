@@ -15,6 +15,16 @@
 </body>
 
 <script type="text/javascript">
+    
+    // Default value of "UseCapture" is false: event bubble
+
+    var parent = document.getElementById('parent'),
+        children = document.getElementById('children');
+
+    children.addEventListener('click', function (e) { 
+        alert('Children Bubble 1');
+        // e.stopPropagation();
+    }, false);
 
     children.addEventListener('click', function (e) { 
         alert('Children Capture');
