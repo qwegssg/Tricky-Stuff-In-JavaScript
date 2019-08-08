@@ -1,6 +1,7 @@
 # Tricky-Stuff-In-JavaScript
 Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.  
-#### Table of Contents  ####
+#### Table of Contents  ####  
+[Currying](#Currying)  
 [CSS Selector](#CSS-Selector)  
 [Event Flow](#Event-Flow)  
 [Hoisting](#hoisting-function-expression-vs-function-declaration)  
@@ -8,8 +9,11 @@ Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.
 [JSONP](#JSONP)  
 [Pagination](#Pagination)  
 [this keyword](#this-keyword)  
-[Rest parameter](#rest-parameter)
-  
+[Rest parameter](#rest-parameter)  
+
+## Currying ##  
+Currying is named after Haskell Curry.  
+
 ## CSS Selector ## 
 <strong>.selector #selector</strong>
 <ul>
