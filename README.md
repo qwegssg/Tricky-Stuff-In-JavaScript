@@ -2,8 +2,8 @@
 Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.  
 #### Table of Contents  ####  
 [Currying](#Currying)  
-[Debounce](#Debounce)  
 [CSS Selector](#CSS-Selector)  
+[Debounce](#Debounce)  
 [Event Flow](#Event-Flow)  
 [Hoisting](#hoisting-function-expression-vs-function-declaration)  
 [Inheritance](#Inheritance)  
