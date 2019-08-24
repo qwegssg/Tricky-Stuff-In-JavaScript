@@ -2,6 +2,7 @@
 Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.  
 #### Table of Contents  ####  
 [Currying](#Currying)  
+[Debounce](#Debounce)  
 [CSS Selector](#CSS-Selector)  
 [Event Flow](#Event-Flow)  
 [Hoisting](#hoisting-function-expression-vs-function-declaration)  
@@ -31,8 +32,11 @@ Currying is named after Haskell Curry.
   <li>'>' for the first level children.</li>
 </ul>
 
+## Debounce ##    
+A function to ensure that time-consuming tasks do not fire so often.  
+
 ## Event Flow ##    
-Capture event & Bubble event  
+Capture event & Bubble event.  
 
 ## Hoisting (Function Expression V.S. Function Declaration) ##  
 ### Function Declaration: ###
