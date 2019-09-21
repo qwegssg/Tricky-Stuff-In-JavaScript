@@ -10,7 +10,7 @@
 
     <script type="text/javascript">
         const startTime = Date.now();
-        const q = new Array(12).fill(0).map(v => {
+        const q = new Array(22).fill(0).map((value, index, array) => {
             const p = new Promise((resolve, reject) => {
                 const xhr = new XMLHttpRequest();
 
@@ -19,7 +19,13 @@
                         resolve();
                     }
                 };
-                xhr.open('GET', 'https://hacker-news.firebaseio.com/v0/topstories.json', true);
+
+                if (index < 6) {
+                    xhr.open('GET', 'https://hacker-news.firebaseio.com/v0/topstories.json', true);
+                } else {
+                    xhr.open('GET', 'https://postman-echo.com/get?foo1=bar1&foo2=bar2', true);
+                }
+                
                 xhr.send();
             });
 
