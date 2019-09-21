@@ -3,6 +3,7 @@ Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.
 #### Table of Contents  ####  
 [Currying](#Currying)  
 [CSS Selector](#CSS-Selector)  
+[Concurrent TCPs](#Concurrent-TCPs)  
 [Debounce](#Debounce)  
 [Event Flow](#Event-Flow)  
 [Hoisting](#hoisting-function-expression-vs-function-declaration)  
@@ -31,6 +32,9 @@ Currying is named after Haskell Curry.
 <ul>
   <li>'>' for the first level children.</li>
 </ul>
+
+## Concurrent TCPs ##  
+Test the concurrent TCP connections of browers.  
 
 ## Debounce ##    
 A function to ensure that time-consuming tasks do not fire so often.  
