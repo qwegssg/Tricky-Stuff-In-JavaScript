@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        const startTime = Date.now();
+        const q = new Array(22).fill(0).map(v => {
+            const p = new Promise((resolve, reject) => {
+                const xhr = new XMLHttpRequest();
+
+                xhr.onreadystatechange = () => {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        resolve();
+                    }
+                };
+                xhr.open('GET', 'https://hacker-news.firebaseio.com/v0/topstories.json', true);
+                xhr.send();
+            });
+
+            return p;
+        });
+
+        console.log(q);
+
+        // parameters of Promise.all: an array of Promises:
+        Promise.all(q).then(rs => {
+            console.log(Date.now() - startTime);
+        }, rj => {
+            console.error("error");
+        });
+    </script>
+
+</body>
+
+</html>
