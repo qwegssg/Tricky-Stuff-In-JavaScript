@@ -10,7 +10,7 @@ Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.
 [Inheritance](#Inheritance)  
 [JSONP](#JSONP)  
 [Pagination](#Pagination)  
-[this keyword](#this-keyword)  
+[this](#this-keyword)  
 [Rest parameter](#rest-parameter)  
 
 ## Currying ##  
