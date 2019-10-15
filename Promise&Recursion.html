@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Promise + Recursion</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        // ref: https://codeday.me/bug/20180924/255625.html
+
+        getCountries("in", 1000000, 1, 0).then(function (value) {
+            console.log(value);
+        });
+
+        function getCountries(s, p, num, count) {
+            return new Promise(function (resolve, reject) {
+                var url = "https://jsonmock.hackerrank.com/api/countries/search?name=" + s + "&page=" + num;
+                var xhr = new XMLHttpRequest();
+
+                console.log(url);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && (xhr.status === 200 || xhr.status === 304)) {
+                        var res = JSON.parse(xhr.responseText);
+
+                        console.log(res);
+
+                        resolve(res);
+                    }
+                }
+                xhr.open("get", url, true);
+                xhr.send();
+            })
+                .then(function (res) {
+                    var countries = res["data"];
+                    var pages = Number(res["total_pages"]);
+                    var currPage = Number(res["page"]);
+                    for (let country of countries) {
+                        if (country["population"] > p) {
+                            count++;
+                        }
+                    }
+
+                    console.log(currPage);
+
+                    if (currPage < pages) {
+                        return getCountries(s, p, num + 1, count);
+                    } else {
+                        return count;
+                    }
+                });
+        }
+    </script>
+</body>
+
+</html>
