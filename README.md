@@ -10,6 +10,7 @@ Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.
 [Inheritance](#Inheritance)  
 [JSONP](#JSONP)  
 [Pagination](#Pagination)  
+[Promise & Recursion](#Promise-&-Recursion)  
 [this](#this-keyword)  
 [Rest parameter](#rest-parameter)  
 
@@ -57,7 +58,10 @@ Listed two examples about the usage of JSONP.
 
 ## Pagination ##  
 Deal with the pagination of table content.  
-![pagination](https://github.com/qwegssg/Tricky-Stuff-In-JavaScript/blob/master/pagination.png)
+![pagination](https://github.com/qwegssg/Tricky-Stuff-In-JavaScript/blob/master/pagination.png)  
+
+## Promise & Recursion ##  
+Deal with Async recursion problem using Promise.  
 
 ## rest parameter ##
 The rest parameter syntax allows us to represent an indefinite number of arguments as an array.  
