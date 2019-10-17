@@ -1,5 +1,5 @@
 # Tricky-Stuff-In-JavaScript
-Deal with the tricky stuff, like "this" keyword, OOP, in JavaScript.  
+Deal with tricky stuff, like "this" keyword, OOP, in JavaScript.  
 #### Table of Contents  ####  
 [Currying](#Currying)  
 [CSS Selector](#CSS-Selector)  
