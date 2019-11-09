@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RequestAnimationFrame</title>
+</head>
+
+<body>
+    <ul id="list"></ul>
+    <script type="text/javascript">
+        var total = 100000;
+        var size = 100;
+        var count = Math.floor(total / size);
+        var done = 0;
+        var ul = document.getElementById('list');
+
+        function addItems() {
+            var li = null;
+            var fg = document.createDocumentFragment();
+
+            for (var i = 0; i < size; i++) {
+                li = document.createElement('li');
+                li.innerText = 'item ' + (done * size + i);
+                fg.appendChild(li);
+            }
+
+            ul.appendChild(fg);
+            done++;
+
+            if (done < count) {
+                requestAnimationFrame(addItems);
+            }
+        };
+
+        requestAnimationFrame(addItems);
+    </script>
+</body>
+
+</html>
