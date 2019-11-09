@@ -35,7 +35,7 @@ Currying is named after Haskell Curry.
 </ul>
 
 ## Concurrent TCPs ##  
-Test the concurrent TCP connections of browers.  
+Test the concurrent TCP connections of different browers.  
 
 ## Debounce ##    
 A function to ensure that time-consuming tasks do not fire so often.  
