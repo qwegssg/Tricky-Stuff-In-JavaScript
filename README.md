@@ -11,8 +11,9 @@ Deal with tricky stuff, like "this" keyword, OOP, in JavaScript.
 [JSONP](#JSONP)  
 [Pagination](#Pagination)  
 [Promise & Recursion](#Promise--Recursion)  
-[this](#this-keyword)  
+[requestAnimationFrame](#requestAnimationFrame)  
 [Rest parameter](#rest-parameter)  
+[this](#this-keyword) 
 
 ## Currying ##  
 Currying is named after Haskell Curry.  
@@ -50,7 +51,7 @@ Capture event & Bubble event.
 ### Function Expression: ###  
 <p>However, function expressions are not hoisted. The reason is because only the variable, foo, in the example JavaScript file is moved to the top of the scope. However, The assignment to the function is NOT moved to the top by the JS interpreter</p>  
 
-## Inheritance: ##  
+## Inheritance ##  
 Implement inheritance in JavaScript using ES5 syntax.  
 
 ## JSONP ##  
@@ -83,3 +84,7 @@ SumCalculator.js gives a example to use rest parameter to sum up numbers.
   <li>The value of this remains at whatever it was set to when entering the execution context.</li>
   <li>If this was not defined by the execution context, it remains <b>undefined.</b></li>
 </ul>  
+  
+## RequestAnimationFrame ##  
+RequestAnimationFrame + documentFragment is very good at dealing with huge data rendering.  
+
